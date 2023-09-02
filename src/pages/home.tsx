@@ -1,0 +1,83 @@
+import React from 'react'
+import Navbar from '../components/navbar'
+const HomePage = () => {
+  return (
+    <div className=''>
+      <Navbar/>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSDASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+      <p>ASDASDSD</p>
+    </div>
+  )
+}
+
+export default HomePage

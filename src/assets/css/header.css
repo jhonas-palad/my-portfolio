@@ -1,0 +1,46 @@
+header, .header{
+    @apply 
+    flex 
+    w-full
+    py-3
+    fixed
+    top-0
+    left-0
+    px-8
+    flex-col
+    md:px-10  /* pag malaki na */
+    backdrop-blur-md
+    ;
+    .logo{
+        @apply text-3xl font-bold text-primary-900;
+        span{
+            @apply 
+            text-secondary-700
+            dark:text-white;
+        };
+    };
+    button{
+        @apply p-[0.3rem] dark:text-white rounded text-sm;
+    };
+    a:not(.logo, .menu-item), button span{
+        @apply text-sm font-normal dark:text-white text-secondary-700;
+
+    };
+    .navlinks{
+        @apply flex items-center dark:text-white text-secondary-700;
+    }
+    .menu-item{
+        @apply 
+        text-sm
+        p-2 
+        flex 
+        justify-center 
+        items-center 
+        gap-2 
+        rounded-md
+        dark:text-white
+    }
+    a, button{
+        cursor: pointer;
+    }
+}

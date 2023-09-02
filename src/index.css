@@ -1,0 +1,29 @@
+@import './assets/css/header.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after{
+  @apply box-border m-0 p-0;
+}
+:root{
+  @apply font-poppins text-base text-secondary-700;
+  @apply transition-colors;
+}
+body{
+  min-height: 100vh;
+  @apply dark:bg-secondary-900;
+  @apply transition-colors;
+}
+#root {
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  @apply md:px-12 px-10
+}
+
+ul, li{
+  text-decoration: none;
+  list-style: none;
+}
+
