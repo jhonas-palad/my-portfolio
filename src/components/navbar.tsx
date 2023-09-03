@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useCallback } from 'react'
+import Logo from './logo'
+
 import {PiMoonStarsFill, PiSunFill } from 'react-icons/pi'
 import {FaGithub, FaBars} from 'react-icons/fa'
 
@@ -7,11 +9,12 @@ import { Transition, Menu } from '@headlessui/react'
 
 const Navbar = () => {
   const {darkmode,toggleDarkMode} = useDarkmode();
+  const toggleDark = useCallback(()=> toggleDarkMode(prev => !prev), [toggleDarkMode])
   return (
     <header className='z-50'>
       <Menu as='div' className='relative w-full'>
         <div className='flex w-full items-center justify-between'>
-          <a className='logo'>JP<span className='text-'>.</span></a>
+          <Logo/>
           <div className='md:flex gap-3 hidden'>
             <nav className='relative navlinks gap-3'>
               <a>About me</a>
@@ -19,7 +22,7 @@ const Navbar = () => {
             </nav>
             <div className='h-7 border-[0.2px] border-gray-300 dark:border-gray-700'/>
             <div className='flex gap-2'>
-              <button onClick={()=> toggleDarkMode(prev => !prev)}>
+              <button onClick={toggleDark}>
                 {
                   darkmode ? (
                     <PiMoonStarsFill className="text-lg"/>
@@ -68,7 +71,7 @@ const Navbar = () => {
                 ({active}) => (
                   <button 
                     className={`${active? 'bg-secondary-700 text-white' : ''} menu-item`} 
-                    onClick={()=> toggleDarkMode(prev => !prev)}>
+                    onClick={toggleDark}>
                     {
                       darkmode ? (
                         <>

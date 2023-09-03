@@ -11,14 +11,6 @@ header, .header{
     md:px-10  /* pag malaki na */
     backdrop-blur-md
     ;
-    .logo{
-        @apply text-3xl font-bold text-primary-900;
-        span{
-            @apply 
-            text-secondary-700
-            dark:text-white;
-        };
-    };
     button{
         @apply p-[0.3rem] dark:text-white rounded text-sm;
     };

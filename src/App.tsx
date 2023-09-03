@@ -1,11 +1,26 @@
 import './App.css'
 import AppContainer from './components/AppContainer'
-
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+}
+from 'react-router-dom';
 import HomePage from './pages/home'
+import RootLayout from './layouts/rootLayout';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/*" element={<RootLayout/>}>
+      <Route index element={<HomePage/>}/>
+    </Route>
+))
+
 function App() {
 
   return (
-      <HomePage/>
+      <RouterProvider router={router}/>
   )
 }
 

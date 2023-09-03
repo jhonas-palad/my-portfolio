@@ -19,7 +19,7 @@ body{
   margin: 0 auto;
   text-align: center;
   height: 100%;
-  @apply md:px-12 px-10
+  @apply relative md:px-12 px-10
 }
 
 ul, li{

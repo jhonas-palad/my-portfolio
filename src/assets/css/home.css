@@ -1,0 +1,116 @@
+.first{
+    
+    .my-profile{
+        @apply 
+        relative
+        flex
+        items-center
+        justify-center
+        md:flex-row flex-col;
+        .my-name{
+            @apply relative;
+            .line-x::after, .line-x::before{
+                content:"";
+                height: 8px;
+                width: 50px;
+                
+                @apply absolute bg-secondary-500 left-0;
+            }
+        }
+        .my-pic{
+            #my-image{
+                @apply 
+                h-[400px]
+                aspect-auto
+                object-cover
+                z-[10]
+            }
+            .box-decor{
+                @apply h-[20px]
+                w-[20px]
+                absolute
+                bg-red-600
+                right-[10%] bottom-[30%]
+                rounded-sm
+            }
+            .box-decor:nth-child(2){
+                @apply 
+                z-[-10]
+                w-[300px]
+                h-[200px]
+                bg-red-400
+                top-[70%] 
+                left-[50%];
+                transform: translate(-50%, -70%);
+            }
+            .box-decor:nth-child(3){
+                @apply w-[50px] h-[50px] top-[30%] right-[25px]
+            }
+            .box-decor:nth-child(4){
+                @apply w-[35px] h-[35px] bg-secondary-900 dark:bg-secondary-700 bottom-[23%] left-[8%]
+            }
+            .box-decor:nth-child(5){
+                @apply w-[15px] h-[15px] bg-secondary-900 dark:bg-secondary-700 top-[33%] left-[20%]
+            }
+        }
+    .my-links{
+        svg{
+            @apply text-2xl
+        }
+        @apply flex gap-5
+    }
+
+    }
+}   
+/* .my-pic{
+    @apply 
+    w-[300px]
+    h-[350px]
+    md:w-[320px]
+    md:h-[370px]
+    transition-all
+    relative
+    cursor-pointer
+    hover:scale-[1.04]
+    hover:rotate-1;
+    .inner{
+        width: inherit;
+        height: inherit;
+        box-shadow: 0 0 10px;
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        overflow: hidden;
+        @apply shadow-black dark:shadow-white;
+    }
+    .circle{
+        @apply w-[50px]
+        h-[50px]
+        z-10
+        bg-primary-900
+        rounded-full
+        absolute;
+        animation: move-up6 2s ease-in infinite alternate-reverse;
+    }
+    .circle:nth-child(1){
+        top: -25px;
+        left: -25px;
+    }
+    .circle:nth-child(2) {
+        bottom: -25px;
+        right: -25px;
+        animation-name: move-down1;
+      }
+    
+}
+
+@keyframes move-up6 {
+    to {
+        transform: translateY(-10px);
+    }
+    }
+    
+    @keyframes move-down1 {
+    to {
+        transform: translateY(10px);
+    }
+    } */
