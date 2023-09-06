@@ -5,11 +5,7 @@ const MyProfile = () => {
   return (
     <div className='flex justify-center items-center'>
       <div className='my-profile max-w-lg'>
-        <div className='my-links mr-6'>
-          <FaInstagram/>
-          <FaFacebook/>
-          <FaLinkedin/>
-          <FaGithub/>
+        <div className='mr-6 w-40 md:w-56'>
         </div>
         <div className='my-name w-full z-40 mb-3'>
             <h1>

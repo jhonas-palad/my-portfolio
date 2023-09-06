@@ -1,0 +1,46 @@
+.downloadbtn{
+    @apply
+    w-[180px]
+    h-[50px]
+    p-2
+    border-2
+    border-sky-500
+    rounded-full
+    flex
+    relative
+    duration-[.3s]
+    shadow-sm
+    overflow-hidden;
+    .IconContainer{
+        @apply w-[30px] h-[30px] flex items-center justify-center rounded-full z-10 duration-[.3s];
+        background: linear-gradient(to bottom, rgb(62, 82, 236),rgb(160, 164, 246));
+    }
+    .icon{
+        border-radius: 1px;
+    }
+    .text{
+        @apply absolute top-[50%] left-[37px] w-full px-2 h-full flex items-center z-[1] duration-[.3s];
+        transform: translate(0%, -50%);
+    }
+    &:hover .IconContainer{
+        width: 190px;
+        /* border-radius: 40px; */
+        transition-duration: .3s;
+
+    }
+    &:hover .text{
+        opacity: 0;
+        /* width: 0; */
+        display: absolute;
+        transition-duration: .3s;
+    }
+    &:active{
+        transform: scale(0.95);
+        transition-duration: .3s;
+    }
+}
+/* .downloadbtn:hover .IconContainer{
+    width: 90px;
+  border-radius: 40px;
+  transition-duration: .3s;
+} */

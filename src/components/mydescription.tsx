@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaInstagram, FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa'
+import DownloadBtn from './downloadbtn'
 const MyDescription = () => {
   return (
     <div className='my-description'>
@@ -10,13 +11,10 @@ const MyDescription = () => {
         Programmer and Developer, based in Philippines.
       </h1>
       <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       </p>
-      <div className='my-links mr-6'>
-          <FaInstagram/>
-          <FaFacebook/>
-          <FaLinkedin/>
-          <FaGithub/>
+        <div>
+          <DownloadBtn/>
         </div>
       </div>
   )

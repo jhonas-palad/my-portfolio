@@ -26,11 +26,11 @@ const Bio = () => {
     }
   ]
   return (
-    <div className='bio w-full border-0'>
+    <div className='bio w-full p-8 rounded-3xl'>
       <h1 className='text-left text-3xl font-semibold'>Bio</h1>
       <div className='bio-details'>
         {
-          BIO_INFORMATION.map(({year, description}, index)=> (
+          BIO_INFORMATION.map(({year, description})=> (
             <div key={useId()} className='bio-detail'>
               <div className='text-left bg-gray-200 px-3 py-4 shadow-md rounded-md'>
                 <p className='font-bold '>{year}</p>
