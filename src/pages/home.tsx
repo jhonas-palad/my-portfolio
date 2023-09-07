@@ -15,15 +15,15 @@ const HomePage:React.FC = () => {
     <>
     <div className='w-full'>
       <div className='section first'>
-        <div className='max-w-4xl w-full flex flex-col md:flex-row justify-between gap-3 md:gap-5'>
+        <div className='max-w-4xl w-full flex mb-14 flex-col md:flex-row justify-between gap-3 md:gap-5'>
           <MyProfile/>
           <MyDescription/>
         </div>
       </div>
-      <div className='section h-[100vh] third items-center'>
-        <div className='max-w-4xl w-full flex flex-col items-center'>
+      <div className='section h-full third items-center'>
+        <div className='max-w-4xl w-full flex flex-col items-center p-5'>
           <h1 className='text-5xl mb-4'>Technology Stack</h1>
-          <p className='px-[4rem] dark:text-secondary-700'>
+          <p className='px-[4rem] dark:text-secondary-500'>
             Equipped with a versatile technology arsenal, I'm ready to tackle any project, adapting to its unique needs and challenges.
           </p>
           <TechIcons/>
@@ -35,11 +35,11 @@ const HomePage:React.FC = () => {
         </div>
       </div>
       <div className='section fourth'>
-        <div className='max-w-4xl h-[100vh] flex flex-col items-center justify-center  w-full'>
+        <div className='max-w-4xl h-full py-10 lg:px-0 px-10 flex flex-col items-center justify-center w-full'>
         <h1 className='text-5xl mb-4'>Projects</h1>
-          <p className='px-[4rem] dark:text-secondary-700'>
+          <p className='px-[4rem] dark:text-secondary-500'>
           Take a look at something I've worked on, such as a case
-study, real project, and more
+            study, real project, and more
           </p>
           <Projects/>
         </div>

@@ -1,6 +1,13 @@
 
+.glass-effect{
+    position: relative;
+    background-color: rgba(129, 129, 129, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.206);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
 .section{
-    @apply flex flex-col md:flex-row justify-center
+    @apply flex flex-col md:flex-row justify-center my-14;
 }
 .section.first{
     @apply w-full md:py-5 px-10;
@@ -13,7 +20,7 @@
         ;
         .my-name{
             h1{
-                @apply text-5xl text-left font-bold dark:shadow-slate-800 shadow-slate-300
+                @apply text-4xl text-left font-semibold dark:shadow-slate-800 shadow-slate-300
                 ;
                 text-shadow: 1px 1px 10px var(--tw-shadow-color)
             }
@@ -82,10 +89,10 @@
         
         @apply text-left md:w-[35%] pt-10 flex flex-col justify-center;
         p:not(.text){
-            @apply font-normal mb-3 text-base lg:text-base md:text-sm text-secondary-600
+            @apply font-normal mb-3 text-sm lg:text-base text-secondary-600
         }
         h1{
-            @apply mb-3 text-3xl lg:text-3xl md:text-2xl break-words font-semibold
+            @apply mb-3 text-2xl lg:text-3xl md:text-2xl break-words font-light
         }
         .my-links{
             @apply hidden md:flex;
@@ -107,42 +114,86 @@
     background-size: contain;
     background-repeat: repeat;
     .bio{
+        --bio-bg-color: rgba(129, 129, 129, 0.075);
         position: relative;
-        background-color: rgba(129, 129, 129, 0.075);
+        background-color: var(--bio-bg-color);
         border: 1px solid rgba(255, 255, 255, 0.206);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-
-        .line{
-            @apply absolute top-9 left-5 h-full border-l-2 w-1;
-        }
         .bio-details{
-            @apply ml-5 border-0 border-l-2 border-primary-600 flex flex-col gap-14;
-            .bio-detail{
-                @apply flex relative pl-10;
-                p{
-                    @apply text-base dark:text-slate-800;
-                }
-                div::before{
-                    content: '';
-                    @apply h-[20px] w-[20px] left-[-10px] top-[50%] translate-y-[-50%] rounded-lg absolute bg-secondary-700;
-                }
+            @apply px-6 relative border-primary-600 flex flex-col gap-6;
+            .line{
+                background: rgb(129, 67, 68);
+                background: linear-gradient(180deg, rgb(247, 2, 2) 0%, rgb(80, 80, 234) 71%, rgba(206, 207, 209, 0.4) 100%);
+                @apply absolute h-full w-[2px] left-[50%] translate-x-[-50%]
             }
-            .bio-detail::before{
-                content:'';
-                @apply absolute left-[-15px] top-[50%] translate-y-[-50%]
-                h-[30px] w-[30px] rounded-full dark:bg-secondary-900 bg-white;
-                
+            .bio-detail{
+                @apply flex relative w-[50%];
+
+            }
+            .bio-detail:nth-child(odd){
+                @apply left-[51%];
+            }
+            .bio-detail:nth-child(odd)::before{
+                content: '';
+                backdrop-filter: blur(50px);
+                -webkit-backdrop-filter: blur(50px);
+                @apply absolute w-5 h-7 bg-slate-100 dark:bg-slate-800 rounded-full left-[-15px] top-[19px]
+            }
+            .bio-detail:nth-child(odd)::after{
+                content: '';
+                @apply absolute bg-red-500 w-3 h-3 left-[-11px] top-[27.5px]
+            }
+            .bio-detail:nth-child(even)::before{
+                content: '';
+                backdrop-filter: blur(50px);
+                -webkit-backdrop-filter: blur(50px);
+                @apply absolute w-5 h-7 bg-slate-100 dark:bg-slate-800 rounded-full right-[-10px] top-[19px]
+            }
+            .bio-detail:nth-child(even)::after{
+                content: '';
+                @apply absolute bg-violet-700 w-3 h-3 right-[-6px] top-[27.5px]
             }
         }
-        /* svg{
-            @apply absolute h-full top-0 left-0;
-        } */
     }
 }
 .section.third{
+
     .tech-icons{
         @apply p-5 gap-4 flex md:w-[500px] w-[400px] flex-wrap justify-around items-center
+        
+    }
+}
+
+.section.fourth{
+    .projects{
+        .project-card{
+            @apply relative p-7 flex md:flex-row flex-col items-center gap-4;
+            /* background: linear-gradient(90deg, rgba(12, 5, 232, 0.48) 0%, rgba(72,102,186,0.19166666666666665) 71%, rgba(9,35,130,0.15694444444444444) 100%); */
+            .img-wrapper{
+                @apply relative shadow-2xl dark:shadow-slate-500 dark:dark:bg-slate-800 bg-gray-100 rounded-lg lg:h-full overflow-hidden md:max-w-[200px] max-w-[170px] w-full;
+                .browser-btns{
+                    @apply flex items-center gap-1 md:gap-2 md:p-3 p-2 ; 
+                    .btn{
+                        @apply w-2 h-2 md:w-3 md:h-3 rounded-full inline-block cursor-pointer;
+                    }
+                }
+            }
+            .content{
+                p{
+                    @apply self-stretch flex justify-center items-center text-center md:text-left;
+                }
+            }
+        }
+        .project-card:nth-child(even){
+            @apply md:flex-row-reverse;
+            .content{
+                p{
+                   @apply md:text-right; 
+                } 
+            }
+        }
+        
     }
 }
 

@@ -3,7 +3,7 @@ import ProjectCard from './project-card'
 
 const Projects = () => {
   return (
-    <div className='flex gap-3 p-10 flex-wrap'>
+    <div className='projects flex gap-3 mt-10 flex-wrap'>
       <ProjectCard/>
       <ProjectCard/>
       <ProjectCard/>

@@ -26,15 +26,18 @@ const Bio = () => {
     }
   ]
   return (
-    <div className='bio w-full p-8 rounded-3xl'>
-      <h1 className='text-left text-3xl font-semibold'>Bio</h1>
+    <div className='bio w-full py-10 px-0 rounded-3xl'>
+      <h1 className='text-5xl mb-2'>Bio</h1>
+      <p className='mb-4 px-20 dark:text-secondary-500'>Take a look at something I've worked on, such as a case
+            study, real project, and more</p>
       <div className='bio-details'>
+        <div className='line'></div>
         {
-          BIO_INFORMATION.map(({year, description})=> (
+          BIO_INFORMATION.map(({year, description}, index)=> (
             <div key={useId()} className='bio-detail'>
-              <div className='text-left bg-gray-200 px-3 py-4 shadow-md rounded-md'>
-                <p className='font-bold '>{year}</p>
-                <p className='text-lg font-light'>{description}</p>
+              <div className={`${index % 2 ? 'text-left' : 'text-right'} p-5 rounded-md w-full`}>
+                <p className='font-bold text-lg'>{year}</p>
+                <p className='lg:text-base font-light text-sm'>{description}</p>
               </div>
             </div>
           ))

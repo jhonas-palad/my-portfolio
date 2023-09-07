@@ -36,7 +36,7 @@ const TechIcons = () => {
     <div className='tech-icons'>
       {
         ICONS.map((icon, index) =>  (
-          <img className='w-[64px] md:w-[80px]' src={icon}/>
+          <img className='w-[54px] md:w-[60px]' src={icon}/>
         ))
       }
     </div>
