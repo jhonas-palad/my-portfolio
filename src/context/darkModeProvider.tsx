@@ -8,7 +8,7 @@ interface DarkmodeContextP {
 const DarkmodeContext = createContext<DarkmodeContextP | null>(null);
 
 const DarkmodeProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
-  const [darkmode, _toggleDarkMode] = useState<boolean>(false);
+  const [darkmode, _toggleDarkMode] = useState<boolean>(true);
   const toggleDarkMode = () => {
     const root = document.querySelector('html');
     const classlist = root?.classList;

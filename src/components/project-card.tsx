@@ -1,6 +1,15 @@
 import React from 'react'
 import myPic from '../assets/qrcode.png'
-const ProjectCard = () => {
+import {BiCodeAlt, BiLinkAlt} from 'react-icons/bi';
+export type ProjectcardProp = { 
+  title: string;
+  description: string;
+  githublink: string;
+  demolink?: string;
+  img: string;
+} 
+
+const ProjectCard : React.FC<ProjectcardProp>= ({title, description, githublink, demolink, img}) => {
   return (
     <div className='project-card'>
   
@@ -11,13 +20,31 @@ const ProjectCard = () => {
             <span className="btn bg-yellow-400"></span>
             <span className="btn bg-green-500"></span>
           </div>
-          <img className="object-contain" src={myPic}/>
+          <img className="object-cover" src={img}/>
       </div>
       <div className="content">
-          <p className='text-center lg:text-left'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          <h2>{title}</h2>
+          <p className=''>
+            {description}
           </p>
-        </div>
+          <div className='links mt-3'>
+            <a href={githublink}>
+              
+                <BiCodeAlt className="mr-2 text-xl"/>
+                Code
+              
+            </a>
+            {
+              demolink && <a href={demolink}>
+              
+                  <BiLinkAlt className="mr-2 text-xl"/>
+                  Demo
+              
+              </a>
+            }
+            
+          </div>
+      </div>
     </div>
   )
 }

@@ -33,12 +33,18 @@ const TechIcons = () => {
     nginxicon
   ]
   return (
-    <div className='tech-icons'>
-      {
-        ICONS.map((icon, index) =>  (
-          <img className='w-[54px] md:w-[60px]' src={icon}/>
-        ))
-      }
+    <div className='flex flex-col items-center p-5'>
+      <h1 className='text-5xl mb-4'>Technology Stack</h1>
+      <p className='px-[4rem] dark:text-secondary-500'>
+        Equipped with a versatile technology arsenal, I'm ready to tackle any project, adapting to its unique needs and challenges.
+      </p>
+      <div className='tech-icons'>
+        {
+          ICONS.map((icon, index) =>  (
+            <img key={index} className='w-[54px] md:w-[60px]' src={icon}/>
+          ))
+        }
+      </div>
     </div>
   )
 }
