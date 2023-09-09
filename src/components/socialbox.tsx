@@ -1,4 +1,3 @@
-import React from 'react'
 import fblogo from '../assets/facebooklogo.svg'
 import iglogo from '../assets/iglogo.svg'
 import linkedinlogo from '../assets/linkedinlogo.svg'
@@ -17,8 +16,8 @@ const SocialBox = () => {
       </div>
       <div className='flex justify-center md:gap-10 gap-8'>
         {
-          [{logo:fblogo,link:"https://www.facebook.com/paladj28"}, {logo:iglogo, link:"https://www.instagram.com/jh_emman", }, {logo: linkedinlogo, link: "https://www.linkedin.com/in/jhonas-palad-234835198/"}, {logo: githublogo, dark: githubdarklogo , link:""}].map(({logo, link ,dark = null})=>(
-            <a target='_blank' className='link md:p-3 p-2 dark:bg-slate-800 bg-slate-100 border-2 rounded-2xl dark:border-slate-800 backdrop-blur-3xl shadow-lg dark:shadow-slate-900' href={link}>
+          [{logo:fblogo,link:"https://www.facebook.com/paladj28"}, {logo:iglogo, link:"https://www.instagram.com/jh_emman", }, {logo: linkedinlogo, link: "https://www.linkedin.com/in/jhonas-palad-234835198/"}, {logo: githublogo, dark: githubdarklogo , link:""}].map(({logo, link ,dark = null}, index)=>(
+            <a key={index} target='_blank' className='link md:p-3 p-2 dark:bg-slate-800 bg-slate-100 border-2 rounded-2xl dark:border-slate-800 backdrop-blur-3xl shadow-lg dark:shadow-slate-900' href={link}>
               <img className=' md:w-[60px] w-[40px]' src={!dark ? logo : darkmode ? dark : logo}/>
             </a>
           ))

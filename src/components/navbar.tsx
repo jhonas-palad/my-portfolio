@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import Logo from './logo'
 
 import {PiMoonStarsFill, PiSunFill } from 'react-icons/pi'
@@ -10,6 +10,28 @@ import { Transition, Menu } from '@headlessui/react'
 const Navbar = () => {
   const {darkmode,toggleDarkMode} = useDarkmode();
   const toggleDark = useCallback(()=> toggleDarkMode(prev => !prev), [toggleDarkMode])
+  const navs = [
+    {
+      id: 'about-me',
+      label: 'About me'
+    },
+    {
+      id: 'techstack',
+      label: 'Techstack'
+    },
+    {
+      id:'bio',
+      label: 'Bio'
+    },
+    {
+      id: 'projects',
+      label: 'Projects'
+    },
+    {
+      id: 'social',
+      label: 'Social Links'
+    }
+  ]
   return (
     <header className='z-50'>
       <Menu as='div' className='relative w-full'>
@@ -17,8 +39,11 @@ const Navbar = () => {
           <Logo/>
           <div className='md:flex gap-3 hidden'>
             <nav className='relative navlinks gap-3'>
-              <a>About me</a>
-              <a>Projects</a>
+              {
+                navs.map(({id, label}, index)  => {
+                  return (<a key={index} href={`#${id}`}>{label}</a>)
+                })
+              }
             </nav>
             <div className='h-7 border-[0.2px] border-gray-300 dark:border-gray-700'/>
             <div className='flex gap-2'>
@@ -51,21 +76,19 @@ const Navbar = () => {
           leaveTo="transform opacity-0 scale-95"
           >
         <Menu.Items className='flex md:hidden gap-3 flex-col justify-center'>
-
-            <Menu.Item>
-              {
-                ({active}) => (
-                  <a className={`${active? 'bg-secondary-700 text-white' : ''} menu-item`}>About me</a>
+            {
+              navs.map(({id, label}, index)=>{
+                return (
+                  <Menu.Item key={index}>
+                    {
+                      ({active}) => (
+                        <a href={`#${id}`} className={`${active? 'bg-secondary-700 text-white' : ''} menu-item`}>{label}</a>
+                      )
+                    }
+                  </Menu.Item>
                 )
-              }
-            </Menu.Item>
-            <Menu.Item>
-              {
-                ({active}) => (
-                  <a className={`${active? 'bg-secondary-700 text-white' : ''} menu-item`}>Projects</a>
-                )
-              }
-            </Menu.Item>
+              })
+            }
             <Menu.Item>
               {
                 ({active}) => (

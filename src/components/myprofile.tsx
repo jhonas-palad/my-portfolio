@@ -1,7 +1,6 @@
-import React from 'react'
-import { FaInstagram, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 import myPic from '../assets/my-image.png';
 import MyDescription from './mydescription';
+
 const MyProfile = () => {
   return (
     <div className='flex justify-center items-center'>

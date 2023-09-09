@@ -13,7 +13,7 @@
     }
 }
 .section.first{
-    @apply w-full md:py-5 pt-5 pb-10;
+    @apply w-full md:py-5 pt-0 pb-10;
     .my-profile{
         @apply 
         relative
@@ -67,8 +67,8 @@
         p:not(.text){
             @apply font-normal mb-3 text-sm lg:text-base text-secondary-600
         }
-        h1{
-            @apply mb-3 text-2xl lg:text-3xl md:text-2xl break-words font-light
+        .typing{
+            @apply mb-3 text-2xl lg:text-3xl md:text-2xl break-words font-light dark:text-white
         }
         .my-links{
             @apply hidden md:flex;
@@ -105,7 +105,10 @@
             }
             .bio-detail{
                 @apply flex relative w-[50%];
-
+            
+                .show{
+                    @apply opacity-100 translate-x-[0];
+                }
             }
             .bio-detail:nth-child(odd){
                 @apply left-[51%];
@@ -118,7 +121,7 @@
             }
             .bio-detail:nth-child(odd)::after{
                 content: '';
-                @apply absolute bg-red-500 w-3 h-3 left-[-11px] top-[27.5px]
+                @apply absolute bg-red-500 w-3 h-3 md:left-[-14px] left-[-11px] top-[27.5px]
             }
             .bio-detail:nth-child(even)::before{
                 content: '';

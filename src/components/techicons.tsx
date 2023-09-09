@@ -1,4 +1,3 @@
-import React from 'react'
 import pythonicon from '../assets/img/tech-icons/python-icon.svg'
 import jsicon from '../assets/img/tech-icons/logo-javascript.svg'
 import htmlicon from '../assets/img/tech-icons/html-1.svg'
@@ -14,6 +13,7 @@ import mongodbicon from '../assets/img/tech-icons/cdnlogo.com_mongodb-icon.svg'
 import nginxicon from '../assets/img/tech-icons/nginx.svg'
 import typescripticon from '../assets/img/tech-icons/typescript.svg'
 import tailwindcssicon from '../assets/img/tech-icons/tailwindcss.svg'
+
 const TechIcons = () => {
   const ICONS = [
     pythonicon,

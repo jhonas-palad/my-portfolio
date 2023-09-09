@@ -1,5 +1,5 @@
 import React from 'react'
-import myPic from '../assets/qrcode.png'
+
 import {BiCodeAlt, BiLinkAlt} from 'react-icons/bi';
 export type ProjectcardProp = { 
   title: string;

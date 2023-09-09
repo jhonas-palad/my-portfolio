@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ProjectCard, {ProjectcardProp} from './project-card'
 import qrcodeimg from '../assets/img/projects/qrcodeimg.png'
 import vcardimg from '../assets/img/projects/vcardimg.png'

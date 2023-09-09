@@ -1,6 +1,5 @@
-import React from 'react'
-import LineSvg from './LineSvg';
 import { useId } from 'react';
+import ObservedObj from './observedobj';
 type BioProp = {
   year: number | string;
   description: string;
@@ -26,7 +25,7 @@ const Bio = () => {
     }
   ]
   return (
-    <div className='bio w-full py-10 px-0 rounded-3xl'>
+    <div className='bio w-full py-10 px-0 rounded-3xl overflow-hidden'>
       <h1 className='text-5xl mb-2'>Bio</h1>
       <p className='mb-4 px-20 dark:text-secondary-500'>Take a look at something I've worked on, such as a case
             study, real project, and more</p>
@@ -35,11 +34,12 @@ const Bio = () => {
         {
           BIO_INFORMATION.map(({year, description}, index)=> (
             <div key={useId()} className='bio-detail'>
-              <div className={`${index % 2 ? 'text-left' : 'text-right'} p-5 rounded-md w-full`}>
-                <p className='font-bold text-lg'>{year}</p>
-                <p className='lg:text-base font-light text-sm'>{description}</p>
-              </div>
+              <ObservedObj className={`${index % 2 ? 'text-left translate-x-[90%]' : 'text-right translate-x-[-90%]'} p-5 rounded-md w-full duration-[2s]`}>
+                  <p className='font-bold text-lg'>{year}</p>
+                  <p className='lg:text-base font-light text-sm'>{description}</p>
+              </ObservedObj>
             </div>
+                            
           ))
         }
       </div>
