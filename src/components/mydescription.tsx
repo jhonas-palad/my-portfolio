@@ -14,7 +14,7 @@ const MyDescription = () => {
           }
         />
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Passionate about turning lines of code into functional solutions. Constantly exploring the ever-evolving world of technology to stay ahead of the curve.Always seeking new challenges and opportunities for growth.
       </p>
         <div className='mt-4'>
           <DownloadBtn/>

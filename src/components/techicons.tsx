@@ -13,7 +13,7 @@ import mongodbicon from '../assets/img/tech-icons/cdnlogo.com_mongodb-icon.svg'
 import nginxicon from '../assets/img/tech-icons/nginx.svg'
 import typescripticon from '../assets/img/tech-icons/typescript.svg'
 import tailwindcssicon from '../assets/img/tech-icons/tailwindcss.svg'
-
+import ObservedObj from './observedobj';
 const TechIcons = () => {
   const ICONS = [
     pythonicon,
@@ -38,13 +38,13 @@ const TechIcons = () => {
       <p className='px-[4rem] dark:text-secondary-500'>
         Equipped with a versatile technology arsenal, I'm ready to tackle any project, adapting to its unique needs and challenges.
       </p>
-      <div className='tech-icons'>
+      <ObservedObj rootMargin='-100px' triggerOnce={true} className='tech-icons'>
         {
           ICONS.map((icon, index) =>  (
             <img key={index} className='w-[54px] md:w-[60px]' src={icon}/>
           ))
         }
-      </div>
+      </ObservedObj>
     </div>
   )
 }

@@ -1,8 +1,12 @@
-import React, { ReactNode } from 'react'
-import { useInView } from 'react-intersection-observer'
-const ObservedObj: React.FC<{children: ReactNode, className: string}> = ({children, className}) => {
-  const {ref, inView} = useInView({threshold:0})
-  console.log(inView)
+import React, { ComponentProps, ReactNode } from 'react'
+import { useInView, IntersectionOptions } from 'react-intersection-observer'
+
+interface ObservedObjProp extends Pick<ComponentProps<"div">, 'className'>, IntersectionOptions{
+  children: ReactNode;
+}
+
+const ObservedObj: React.FC<ObservedObjProp> = ({children, className, ...opts}) => {
+  const {ref, inView} = useInView({threshold:0,...opts})
   return (
     <div ref={ref} className={className + ` ${inView ? ' show' : ' no-show'}`}>
       {children}

@@ -1,0 +1,11 @@
+all: cptomymain
+
+build:
+	echo "Running build..."
+	npm run build
+	echo "Build done"
+cptomymain: build
+	cp -R ./dist/* /Users/jhonas/Developer/my-portfoliio-dist
+	git add .
+	git commit -m "new commit"
+	git push origin main

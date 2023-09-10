@@ -138,8 +138,11 @@
 }
 .section.third{
     .tech-icons{
-        @apply p-5 gap-4 flex md:w-[500px] w-[400px] flex-wrap justify-around items-center
+        @apply p-5 gap-4 flex md:w-[500px] w-[400px] flex-wrap justify-around items-center translate-y-[100%] opacity-0 duration-[3s]
         
+    }
+    .tech-icons.show{
+        @apply translate-y-0 opacity-[1];
     }
 }
 
@@ -174,18 +177,35 @@
                     letter-spacing: 0.05rem;
                     /* border: 2px solid; */
                     /* border-image-slice: 1px; */
-                    
+                
                     @apply 
                     relative
-                    /* text-white */
-                    border-0
-                    border-b-2
+                    text-secondary-500 transition-colors duration-100
                     flex
                     items-center
-                    rounded-lg
+                    /* rounded-lg */
                     overflow-hidden
                     p-2;
-                    border-image: linear-gradient(to right, #8e2de2, #4a00e0) 1;
+                    /* border-image:  */
+                    &:hover{
+                        @apply text-secondary-900 dark:text-white;
+                    }
+                    &:hover::after{
+                        @apply  translate-x-0;
+                    }
+                    &::after{
+                        content: '';
+                        @apply absolute
+                        w-full
+                        h-1
+                        bottom-0
+                        left-0
+                        transition-transform
+                        duration-200
+                        translate-x-[-120%];
+                        /* bg-red-400; */
+                        background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+                    }
                 }
             }
         }
@@ -199,7 +219,8 @@
                    @apply md:text-right; 
                 } 
                 .links{
-                    @apply  md:justify-start
+                    @apply  md:justify-start;
+                    
                 }
             }
         }
@@ -212,7 +233,6 @@
     .link{
         @apply transition-all;
         &:hover{
-            
             @apply scale-125
         }
     }
