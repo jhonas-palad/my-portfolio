@@ -14,7 +14,7 @@ const MyDescription = () => {
           }
         />
       <p>
-      Passionate about turning lines of code into functional solutions. Constantly exploring the ever-evolving world of technology to stay ahead of the curve.Always seeking new challenges and opportunities for growth.
+      Passionate about turning lines of code into functional solutions. Always seeking new challenges and opportunities for growth.
       </p>
         <div className='mt-4'>
           <DownloadBtn/>

@@ -4,6 +4,7 @@ import qrcodeimg from '../assets/img/projects/qrcodeimg.png'
 import vcardimg from '../assets/img/projects/vcardimg.png'
 import chatbot from '../assets/img/projects/chatbotimg.png'
 import ytimg from '../assets/img/projects/ytimg.png'
+import SectionHeader from './sectionheader'
 
 
 const PROJECTS : Array<ProjectcardProp>  = [
@@ -39,12 +40,11 @@ const PROJECTS : Array<ProjectcardProp>  = [
 const Projects = () => {
   return (
     <div className='h-full min-h-[100vh] py-10 lg:px-0 px-10 flex flex-col items-center justify-center'>
-      <h1 className='text-5xl mb-4'>Projects</h1>
-      <p className='px-[4rem] dark:text-secondary-500'>
+      <SectionHeader title='Projects'>
       Take a look at something I've worked on, such as a case
         study, real project, and more
-      </p>
-      <div className='projects flex gap-5 mt-10 flex-wrap'>
+      </SectionHeader>
+      <div className='projects mt-10 flex flex-wrap'>
         {
           PROJECTS.map((project, index)=>(
             <ProjectCard key={index} {...project}/>

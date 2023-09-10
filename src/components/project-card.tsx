@@ -27,7 +27,7 @@ const ProjectCard : React.FC<ProjectcardProp>= ({title, description, githublink,
           <p className=''>
             {description}
           </p>
-          <div className='links mt-3'>
+          <div className='links'>
             <a href={githublink}>
               
                 <BiCodeAlt className="mr-2 text-xl"/>
