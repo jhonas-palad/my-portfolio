@@ -1,11 +1,18 @@
-all: cptomymain
+TARGET_DIR=/Users/jhonas/Developer/my-portfoliio-dist
+FROM=dist/*
+
+all: pushdist
 
 build:
 	echo "Running build..."
 	npm run build
 	echo "Build done"
-cptomymain: build
-	cp -R ./dist/* /Users/jhonas/Developer/my-portfoliio-dist
+pushdist:cptomymain
+	cd $(TARGET_DIR)
 	git add .
 	git commit -m "new commit"
 	git push origin main
+
+cptomymain: build 
+	cp -R $(FROM) $(TARGET_DIR)
+	
