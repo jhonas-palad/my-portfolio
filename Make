@@ -4,11 +4,11 @@ FROM=dist/*
 all: pushdist
 
 build:
-	echo "Running build..."
-	npm run build
-	echo "Build done"
+	echo "Running build...";
+	npm run build;
+	echo "Build done";
 pushdist:cptomymain
-	cd $(TARGET_DIR)
+	cd $(TARGET_DIR);
 	make -f $(TARGET_DIR)/Make
 
 cptomymain: build 
