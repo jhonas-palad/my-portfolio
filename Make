@@ -8,9 +8,8 @@ build:
 	npm run build;
 	echo "Build done";
 pushdist:cptomymain
-	cd $(TARGET_DIR);
+	cd $(TARGET_DIR) && \
 	make -f $(TARGET_DIR)/Make
 
 cptomymain: build 
 	cp -R $(FROM) $(TARGET_DIR)
-	
