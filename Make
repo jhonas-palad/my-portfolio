@@ -9,9 +9,7 @@ build:
 	echo "Build done"
 pushdist:cptomymain
 	cd $(TARGET_DIR)
-	git add .
-	git commit -m "new commit"
-	git push origin main
+	make -f $(TARGET_DIR)/Make
 
 cptomymain: build 
 	cp -R $(FROM) $(TARGET_DIR)
