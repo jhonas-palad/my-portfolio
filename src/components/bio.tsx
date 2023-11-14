@@ -1,6 +1,6 @@
-import { useId } from 'react';
 import ObservedObj from './observedobj';
 import SectionHeader from './sectionheader';
+import { Calendar } from 'lucide-react';
 type BioProp = {
   year: number | string;
   description: string;
@@ -22,7 +22,7 @@ const Bio = () => {
     },
     {
       year: "Present",
-      description: "Looking for job"
+      description: "Doing freelance and Looking for full time job"
     }
   ]
   return (
@@ -34,9 +34,12 @@ const Bio = () => {
         <div className='line'></div>
         {
           BIO_INFORMATION.map(({year, description}, index)=> (
-            <div key={useId()} className='bio-detail'>
+            <div key={index} className={`relative bio-detail before:absolute before:w-8 before:h-8 before:rounded-full before:bg-white/80 ${index % 2 == 0 ? 'before:-right-[17px]': 'before:-left-[22px]' } before:top-1/2 before:-translate-y-1/2 `}>
+              <div className={`absolute top-1/2  ${index % 2 == 0 ? '-right-[20px]': '-left-[26px]'} -translate-y-1/2 flex justify-center items-center w-10 h-10`}>
+                <Calendar size="1rem" className='text-gray-700'/>
+              </div>
               <ObservedObj rootMargin='-70px' className={`${index % 2 ? 'text-left translate-x-[50%]' : 'text-right translate-x-[-50%]'} p-5 rounded-md opacity-0 w-full duration-[2s]`}>
-                  <p className='year'>{year}</p>
+                  <h2 className='year'>{year}</h2>
                   <p className='desc'>{description}</p>
               </ObservedObj>
             </div>
